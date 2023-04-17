@@ -10,7 +10,7 @@ pipeline {
   }
   post {
     always {
-      emailext body: build().result.toString(),
+      emailext body: build.result.toString(),
                subject: 'Build operation result',
                to: 'yoan.sanna@netc.fr'
     }
