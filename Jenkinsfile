@@ -12,7 +12,7 @@ pipeline {
     always {
       emailext body: "Build #${currentBuild.number} is ${currentBuild.currentResult}",
                subject: "Build operation #${currentBuild.number} result: ${currentBuild.currentResult}",
-               to: 'yoan.sanna@netc.fr'
+               to: 'rinca.nera@netc.fr'
     }
   }
 }
