@@ -5,7 +5,9 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building...'
-        mail (subject: 'Build operation result', body: 'test', to: 'yoan.sanna@netc.fr')
+        emailext body: build().result.toString(),
+                 subject: 'Build operation result',
+                 to: 'yoan.sanna@netc.fr'
       }
     }
   }
