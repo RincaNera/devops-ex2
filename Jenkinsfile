@@ -13,6 +13,7 @@ pipeline {
       emailext body: "Build #${currentBuild.number} is ${currentBuild.currentResult}",
                subject: "Build operation #${currentBuild.number} result: ${currentBuild.currentResult}",
                to: 'rinca.nera@netc.fr'
+      slackSend message: "Build #${currentBuild.number} is ${currentBuild.currentResult}"
     }
   }
 }
